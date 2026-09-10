@@ -3,40 +3,35 @@ package PRG.Basics;
 import fileworks.DataImport;
 
 public class Country {
-
-    String name, continent;
-    long population;
-    double avgAge;
-
-    public Country(String name, String continent, long population, double avgAge) {
-
-        this.name = name;
-        this.continent = continent;
-        this.population = population;
-        this.avgAge = avgAge;
-    }
-
     public static void main(String[] args) {
 
         String path = "data/countries.txt";
+
         DataImport di = new DataImport(path);
 
-        Country czechia = new Country("Czech Republic", "Europe", 10_800_000, 85.0);
+        Long nejmensiPopulace = 99999999999999l;
+        Double nejvetsiAvgAge = 0.0;
 
-        String line = di.readLine();
-        String[] tokeny = line.split(";");
-        String name = tokeny[0];
-        String continent = tokeny[1];
-        long population = Long.parseLong(tokeny[2]);
-        double avgAge = Double.parseDouble(tokeny[3]);
+        while (di.hasNext()) {
 
-        Country oneCountry = new Country(name, continent, population, avgAge);
+            String radek = di.readLine();
 
-        di.finishImport();
-    }
+            Long populace = Long.parseLong(radek.split(";")[2]);
 
-    public String toString() {
+            if (populace < nejmensiPopulace) {
 
-        return name;
+                nejmensiPopulace = populace;
+            }
+
+            double avgAge = Double.parseDouble(radek.split(";")[3]);
+
+            if (avgAge > nejvetsiAvgAge) {
+
+                nejvetsiAvgAge = avgAge;
+            }
+        }
+
+        System.out.println(nejmensiPopulace);
+        System.out.println(nejvetsiAvgAge);
     }
 }
