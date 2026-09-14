@@ -1,4 +1,4 @@
-package PRG.Basics;
+package PRG;
 
 import fileworks.DataImport;
 

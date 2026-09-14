@@ -1,8 +1,9 @@
-package PRG.Basics;
+package PRG;
 
 import fileworks.DataImport;
 
 public class Country {
+
     public static void main(String[] args) {
 
         String path = "data/countries.txt";

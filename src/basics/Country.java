@@ -12,8 +12,17 @@ public class Country {
         this.continent = continent;
         this.population = population;
         this.avgAge = avgAge;
-    }
 
+        if (avgAge >= 13 && avgAge <= 101) {
+
+            this.avgAge = avgAge;
+        }
+
+        else {
+
+            this.avgAge = 0.0d;
+        }
+    }
 
     @Override
     public String toString() {
