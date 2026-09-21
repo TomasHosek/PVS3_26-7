@@ -1,0 +1,17 @@
+Film{nazev='It Follows', rokVydani=2014, zanr='Horror', rating=6.8}
+Film{nazev='A Quiet Place', rokVydani=2018, zanr='Horror', rating=7.5}
+Film{nazev='The Shining', rokVydani=1980, zanr='Horror', rating=8.8}
+Film{nazev='The Blair Witch Project', rokVydani=1999, zanr='Horror', rating=6.5}
+Film{nazev='Psycho', rokVydani=1960, zanr='Horror', rating=8.7}
+Film{nazev='Let the Right One In', rokVydani=2008, zanr='Horror', rating=7.9}
+Film{nazev='The Witch', rokVydani=2015, zanr='Horror', rating=6.9}
+Film{nazev='Velvet Shadows', rokVydani=2021, zanr='Horror', rating=8.7}
+Film{nazev='Paranormal Activity', rokVydani=2007, zanr='Horror', rating=6.3}
+Film{nazev='The Ring', rokVydani=2002, zanr='Horror', rating=7.1}
+Film{nazev='The Others', rokVydani=2001, zanr='Horror', rating=7.6}
+Film{nazev='The Conjuring', rokVydani=2013, zanr='Horror', rating=7.5}
+Film{nazev='The Sixth Sense', rokVydani=1999, zanr='Horror', rating=8.1}
+Film{nazev='A Nightmare on Elm Street', rokVydani=1984, zanr='Horror', rating=8.2}
+Film{nazev='Get Out', rokVydani=2017, zanr='Horror', rating=8.6}
+Film{nazev='Saw', rokVydani=2004, zanr='Horror', rating=7.6}
+Film{nazev='Insidious', rokVydani=2010, zanr='Horror', rating=6.8}
