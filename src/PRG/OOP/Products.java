@@ -8,12 +8,12 @@ class Product {
 
     String name;
     String category;
-    int ammount;
+    int amount;
     double pricePerPiece;
 
     private final String defaultCategory = "Other";
 
-    // GETTERY
+    // GETTERY a SETTERY
 
     public String getName() {
         return name;
@@ -31,22 +31,20 @@ class Product {
         this.category = category;
     }
 
-    public int getAmmount() {
-        return ammount;
+    public int getAmount() {
+        return amount;
     }
 
-    // SETTERY
+    public void setAmount(int amount) {
 
-    public void setAmmount(int ammount) {
+        if (amount > 0) {
 
-        if (ammount > 0) {
-
-            this.ammount = ammount;
+            this.amount = amount;
         }
 
         else {
 
-            this.ammount = 0;
+            this.amount = 0;
         }
     }
 
@@ -72,7 +70,7 @@ class Product {
         return "Product{" +
                 "name='" + name + '\'' +
                 ", category='" + category + '\'' +
-                ", ammount=" + ammount +
+                ", ammount=" + amount +
                 ", pricePerPiece=" + pricePerPiece +
                 '}';
     }
@@ -83,22 +81,22 @@ class Product {
         this.category = category;
     }
 
-    public Product(String name, String category, int ammount) {
+    public Product(String name, String category, int amount) {
 
         this(name, category);
-        this.ammount = ammount;
+        this.amount = amount;
     }
 
-    public Product(String name, int ammount, double pricePerPiece) {
+    public Product(String name, int amount, double pricePerPiece) {
 
         this.name = name;
-        this.ammount = ammount;
+        this.amount = amount;
         this.pricePerPiece = pricePerPiece;
     }
 
-    public Product(String name, String category, int ammount, double pricePerPiece) {
+    public Product(String name, String category, int amount, double pricePerPiece) {
 
-        this(name, category, ammount);
+        this(name, category, amount);
         this.pricePerPiece = pricePerPiece;
     }
 }
@@ -108,8 +106,8 @@ public class Products {
     static void main(String[] args) {
 
         DataImport di = new DataImport("data/products.txt");
-
         ArrayList<Product> produkty = new ArrayList<>();
+        Product zbozi;
 
         while (di.hasNext()) {
 
@@ -118,21 +116,21 @@ public class Products {
 
             if (tokeny.length == 2) {
 
-                Product zbozi = new Product(tokeny[0], tokeny[1]);
+                zbozi = new Product(tokeny[0], tokeny[1]);
 
                 produkty.add(zbozi);
             }
 
             else if (tokeny.length == 3) {
 
-                Product zbozi = new Product(tokeny[0], tokeny[1], Integer.parseInt(tokeny[2]));
+                zbozi = new Product(tokeny[0], tokeny[1], Integer.parseInt(tokeny[2]));
 
                 produkty.add(zbozi);
             }
 
             else if (tokeny.length == 4) {
 
-                Product zbozi = new Product(tokeny[0], tokeny[1], Integer.parseInt(tokeny[2]), Double.parseDouble(tokeny[3]));
+                zbozi = new Product(tokeny[0], tokeny[1], Integer.parseInt(tokeny[2]), Double.parseDouble(tokeny[3]));
 
                 produkty.add(zbozi);
             }
@@ -141,6 +139,9 @@ public class Products {
         System.out.println("Počet produktů: " + produkty.size());
 
         Product product = new Product("Chair", 400, 0.0);
+
+        System.out.println(product.getName() + ": " + product.getAmount());
+        System.out.println(product.toString());
 
         di.finishImport();
     }
