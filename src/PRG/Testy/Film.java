@@ -49,7 +49,6 @@ public class Film {
         DataImport di = new DataImport("data/movieList.txt");
         DataExport de = new DataExport("data/horrors.txt");
 
-        double nejvetsiRating = 0.0;
         int pocetFilmuPoRoce2000 = 0;
 
         Film nejlepsiFilm = new Film(null, 0, null, 0.0);

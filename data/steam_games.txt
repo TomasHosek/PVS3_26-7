@@ -89615,4 +89615,4 @@ Outrun Them	3.99	-1	It's all in the name.. outrun them.
 Lands of Pharaoh: Episode 1	10.0	-1	Lands of Pharaoh is a multi-camera-angle based adventure game. The hero, Heragos, tries to get to Cairo in order to find the messages, related to his divine duty, left for him by Nefertiti.
 Player One	1.99	-1	3D Game, Thirdperson Platformer
 DragonRoad	29.99	-1	This is an open world game on 3D, Also a mission centered survival battle game. It includes role-playing, tactical strategy, experience upgrade.It has Dozens scenes and combat tasks, allowing players to complete tasks and receive rewards. It support multi people cooperation on network.
-Ragtag Adventurers	9.99	-1	
+Ragtag Adventurers	9.99	-1
