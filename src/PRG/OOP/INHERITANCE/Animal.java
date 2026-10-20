@@ -2,6 +2,7 @@ package PRG.OOP.INHERITANCE;
 
 import fileworks.DataImport;
 
+import java.util.AbstractCollection;
 import java.util.ArrayList;
 
 public class Animal {
