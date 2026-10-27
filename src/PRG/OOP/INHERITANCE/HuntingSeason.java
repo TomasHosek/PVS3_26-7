@@ -19,6 +19,27 @@ class Hunter {
         System.out.println(name + " is hunting...");
         gold += 10;
     }
+
+    @Override
+    public String toString() {
+
+        if (getClass() == Hunter.class) {
+
+            return "Hunter " + name + " with " + gold + " gold";
+        }
+
+        if (getClass() == Soldier.class) {
+
+            return "Soldier  " + name + " with " + gold + " gold";
+        }
+
+        if (getClass() == Witcher.class) {
+
+            return "Witcher  " + name + " with " + gold + " gold";
+        }
+
+        return getClass().getName() + "@" + Integer.toHexString(hashCode());
+    }
 }
 
 class Soldier extends Hunter {
@@ -100,7 +121,7 @@ public class HuntingSeason {
         hunters.add(new Soldier("Marek"));
         hunters.add(new Witcher("Žampion"));
 
-        int pocetZakazek = 5;
+        int pocetZakazek = 100;
 
         Random randomHunter = new Random();
         int randomIndex;
@@ -122,7 +143,10 @@ public class HuntingSeason {
             }
         }
 
-        System.out.println("\n" + bestHunter.name);
-        System.out.println(bestHunter.gold);
+
+
+        System.out.println("\n " + bestHunter.toString());
     }
+
+
 }
